@@ -1,0 +1,16 @@
+# Server Deployment Guide
+
+1. Push your code from local machine:
+   git remote add origin [YOUR_GITHUB_URL]
+   git push -u origin master
+
+2. On your Server (SSH):
+   cd /home/wcdq4d18mj5g/
+   git clone [YOUR_GITHUB_URL] source_code
+   cd source_code
+   npm install
+   npm run build
+   
+3. Copy to public_html:
+   cp -r dist/* /home/wcdq4d18mj5g/public_html/cell24x7.com/
+   cp -r public/videos/* /home/wcdq4d18mj5g/public_html/cell24x7.com/videos/

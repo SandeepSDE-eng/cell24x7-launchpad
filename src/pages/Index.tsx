@@ -14,9 +14,9 @@ const Index = () => {
       <ChannelsSection />
       <FeaturesSection />
       {/* Video player added for public access */}
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '32px 0' }}>
-        <video controls width="800" className="rounded-xl shadow-2xl">
-          <source src="/videos/vid_24apr.mp4" type="video/mp4" />
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '32px 0', width: '100%', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto' }}>
+        <video controls width="100%" className="rounded-xl shadow-2xl border-4 border-white/10">
+          <source src="/videos/VID1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
