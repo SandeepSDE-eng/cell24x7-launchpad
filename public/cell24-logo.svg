@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120">
+  <!-- Left word -->
+  <g font-family="Inter, Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="20" y="80" font-size="72" fill="#EE3344">Cell</text>
+    <text x="220" y="80" font-size="72" fill="#111">24</text>
+    <text x="315" y="80" font-size="72" fill="#111">x7</text>
+  </g>
+  <!-- Speech bubble box behind the 24x7 to echo the attached logo -->
+  <rect x="210" y="10" width="200" height="80" rx="10" fill="#EE3344" opacity="0.06" />
+</svg>

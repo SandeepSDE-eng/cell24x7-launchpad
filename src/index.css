@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Gupshup-inspired Purple/Magenta + Blue Palette */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    /* Primary - Purple/Violet */
+    --primary: 271 81% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft Gray */
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    /* Accent - Magenta/Pink */
+    --accent: 330 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 271 81% 56%;
+
+    /* For daily theme switching (hex, used by JS) */
+    --color-background: #fff;
+    --color-foreground: #222;
+    --color-primary: #0ea5a4;
+    --color-accent: #06b6d4;
+
+    --radius: 1rem;
+
+    /* Custom Brand Colors - Gupshup Inspired */
+    --brand-purple: 271 81% 56%;
+    --brand-magenta: 330 85% 60%;
+    --brand-blue: 217 91% 60%;
+    --brand-pink: 340 82% 65%;
+    --brand-orange: 25 95% 60%;
+    --brand-gradient-start: 271 81% 56%;
+    --brand-gradient-end: 330 85% 60%;
+    
+    /* Surface Colors */
+    --surface-elevated: 0 0% 100%;
+    --surface-sunken: 240 5% 97%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(240 10% 10% / 0.04);
+    --shadow-md: 0 4px 6px -1px hsl(240 10% 10% / 0.08), 0 2px 4px -2px hsl(240 10% 10% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(240 10% 10% / 0.08), 0 4px 6px -4px hsl(240 10% 10% / 0.04);
+    --shadow-xl: 0 20px 25px -5px hsl(240 10% 10% / 0.1), 0 8px 10px -6px hsl(240 10% 10% / 0.08);
+    --shadow-glow: 0 0 60px hsl(271 81% 56% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 271 81% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 271 81% 56%;
+  }
+
+  .dark {
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 271 81% 65%;
+    --primary-foreground: 240 10% 6%;
+
+    --secondary: 240 6% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 6% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 330 85% 65%;
+    --accent-foreground: 240 10% 6%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 271 81% 65%;
+
+    --surface-elevated: 240 10% 10%;
+    --surface-sunken: 240 10% 4%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Gupshup-style Gradient Backgrounds */
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--brand-purple)) 0%, hsl(var(--brand-magenta)) 100%);
+  }
+
+  .gradient-hero-subtle {
+    background: linear-gradient(180deg, hsl(var(--brand-purple) / 0.04) 0%, hsl(var(--brand-magenta) / 0.08) 50%, transparent 100%);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--brand-magenta)) 0%, hsl(var(--brand-purple)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    position: relative;
+    background: hsl(var(--card));
+    border-radius: var(--radius);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(var(--brand-purple)) 0%, hsl(var(--brand-magenta)) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Glass Effect */
+  .glass {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Card Variants */
+  .card-elevated {
+    @apply bg-card rounded-xl p-6;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .card-feature {
+    @apply bg-card rounded-2xl p-8 border border-border/50 transition-all duration-300;
+  }
+
+  .card-feature:hover {
+    /* @apply border-primary/30; removed: not a valid Tailwind class */
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+  }
+
+  /* Animated Underline */
+  .animated-underline {
+    @apply relative;
+  }
+
+  .animated-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300;
+  }
+
+  .animated-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: 0 0 60px hsl(var(--brand-purple) / 0.4);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 60px hsl(var(--brand-magenta) / 0.4);
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Text Balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animation Delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+}
