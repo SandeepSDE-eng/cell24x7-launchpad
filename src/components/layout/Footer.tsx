@@ -108,7 +108,6 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <p className="text-sm text-muted-foreground mb-2">{siteConfig.contact.location}</p>
             <p className="text-sm text-muted-foreground mb-2">{siteConfig.contact.address}</p>
-            <p className="text-sm text-muted-foreground mb-2">Get there: {siteConfig.contact.getThere}</p>
 
             <a href={`mailto:${siteConfig.contact.email}`} className="block mt-3 text-sm text-muted-foreground hover:text-primary">{siteConfig.contact.email}</a>
             <a href={`tel:${siteConfig.contact.phone}`} className="block mt-2 text-sm text-muted-foreground hover:text-primary">{siteConfig.contact.phone}</a>

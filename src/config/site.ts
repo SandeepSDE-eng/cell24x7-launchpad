@@ -27,12 +27,11 @@ export const siteConfig = {
   },
   
   contact: {
-    email: "contact@cell24x7.com",
-    phone: "022 4960 8812",
-    whatsapp: "+1234567890",
+    email: "sales@cell24x7.com",
+    phone: "+91 87797 21034",
+    whatsapp: "918779721034",
     location: "Phoenix Marketcity",
     address: "No.3B-05:, PHOENIX MARKETCITY, Paragon Plaza, Kurla West, Kurla, Mumbai, Maharashtra 400070",
-    getThere: "48 mins · 24 mins",
   },
 
   // Simple admin password for local demo dashboard (dummy password)
