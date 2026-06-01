@@ -12,15 +12,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# 2. Upload to cPanel
+# 2. Upload to server
 echo ""
-echo "Step 2: Uploading dist files to cPanel server..."
+echo "Step 2: Uploading dist files to server..."
 echo "(It might prompt you for your SSH password)"
 echo ""
 
-# Note: If your SSH port is not 22, add "-P port_number" (capital P) like this:
-# scp -P 2200 -r dist/* wcdq4d18mj5g@cell24x7.com:public_html/cell24x7.com/
-scp -r dist/* wcdq4d18mj5g@cell24x7.com:public_html/cell24x7.com/
+scp -r dist/* adm.Cell24X7@154.210.160.223:/home/adm.Cell24X7/cmt-react/cmtmedia/dist/
 
 if [ $? -ne 0 ]; then
     echo ""

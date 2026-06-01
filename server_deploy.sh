@@ -26,12 +26,12 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# 3. Copy to public_html
-echo "Step 3: Copying dist files to public_html..."
+# 3. Copy to deployment folder
+echo "Step 3: Copying dist files to destination folder..."
 # Ensure the destination exists
-mkdir -p /home/wcdq4d18mj5g/public_html/cell24x7.com/
+mkdir -p /home/adm.Cell24X7/cmt-react/cmtmedia/dist/
 
-cp -r dist/* /home/wcdq4d18mj5g/public_html/cell24x7.com/
+cp -r dist/* /home/adm.Cell24X7/cmt-react/cmtmedia/dist/
 
 if [ $? -ne 0 ]; then
     echo "[ERROR] Copying files failed!"
