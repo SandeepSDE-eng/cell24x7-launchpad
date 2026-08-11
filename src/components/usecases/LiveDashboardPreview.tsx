@@ -137,7 +137,7 @@ export function LiveDashboardPreview({ industry, className = "" }: LiveDashboard
           </div>
           <div className="w-7 h-7 rounded-lg bg-muted flex items-center justify-center relative">
             <Bell className="w-3.5 h-3.5 text-muted-foreground" />
-            <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+            <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-indigo-500 rounded-full animate-pulse" />
           </div>
           <div className="w-7 h-7 rounded-lg bg-muted flex items-center justify-center">
             <TrendingUp className="w-3.5 h-3.5 text-muted-foreground" />

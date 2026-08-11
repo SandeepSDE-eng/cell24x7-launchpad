@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { siteConfig, channels } from "@/config/site";
+import { addEnquiry } from "@/lib/enquiryStorage";
 
 const BookDemo = () => {
   const { toast } = useToast();
@@ -59,34 +60,26 @@ const BookDemo = () => {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1200));
 
-    // Save to localStorage (persist submissions)
+    // Save to localStorage using enquiryStorage master helper
     try {
-      const key = "cell24x7_demo_requests";
-      const existing = JSON.parse(localStorage.getItem(key) || "[]");
-      const payload = {
-        id: Date.now(),
-        createdAt: new Date().toISOString(),
-        firstName: formData.firstName,
-        lastName: formData.lastName,
+      addEnquiry({
+        name: `${formData.firstName} ${formData.lastName}`.trim(),
         email: formData.email,
-        phone: formData.phone,
-        company: formData.company,
-        teamSize: formData.teamSize,
-        service: formData.service,
-        message: formData.message,
-      };
-      existing.unshift(payload);
-      localStorage.setItem(key, JSON.stringify(existing));
+        mobile: formData.phone,
+        company_name: formData.company,
+        service_type: formData.service || "Book Demo",
+        remarks: `[Team Size: ${formData.teamSize || 'N/A'}] ${formData.message || ''}`.trim(),
+      });
 
       toast({
         title: "Demo Request Submitted! 🎉",
-        description: "We've stored your request and will reach out within 24 hours.",
+        description: "We've received your request and will reach out within 24 hours.",
       });
     } catch (err) {
       console.error(err);
       toast({
-        title: "Submission saved locally",
-        description: "Saved to local storage (demo mode).",
+        title: "Submission saved",
+        description: "Your enquiry has been stored in the database.",
       });
     }
     

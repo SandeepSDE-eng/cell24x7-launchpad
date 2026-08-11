@@ -17,6 +17,8 @@ type ChatMessage = {
   text: string;
 };
 
+import { getCachedVisitorGeo } from "@/lib/visitorTracking";
+
 type ChatLead = {
   id: number;
   createdAt: string;
@@ -25,6 +27,11 @@ type ChatLead = {
   phone: string | null;
   service: string | null;
   transcript: Array<{ from: "bot" | "user"; text: string; at: string }>;
+  ip?: string | null;
+  city?: string | null;
+  region?: string | null;
+  country?: string | null;
+  flag?: string | null;
 };
 
 const CHAT_LEADS_KEY = "cell24x7_chat_leads";
@@ -65,6 +72,7 @@ export function ChatWidget() {
     messages.map((m) => ({ from: m.from, text: m.text, at: new Date().toISOString() }));
 
   const saveLead = (service: string) => {
+    const geo = getCachedVisitorGeo();
     const payload: ChatLead = {
       id: leadId ?? Date.now(),
       createdAt: new Date().toISOString(),
@@ -73,6 +81,11 @@ export function ChatWidget() {
       phone: leadPhone,
       service,
       transcript: getTranscript(),
+      ip: geo.ip,
+      city: geo.city,
+      region: geo.region,
+      country: geo.country,
+      flag: geo.flagEmoji,
     };
     const existing = JSON.parse(localStorage.getItem(CHAT_LEADS_KEY) || "[]");
     const filtered = existing.filter((l: ChatLead) => l.id !== payload.id);

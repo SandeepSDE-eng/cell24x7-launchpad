@@ -10,7 +10,7 @@ export function HealthcarePreview() {
   return (
     <div className="w-full h-full bg-background rounded-2xl shadow-lg overflow-hidden border border-border/50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-red-500 to-pink-600 px-4 py-3">
+      <div className="bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="text-sm font-semibold text-white">Patient Engagement</div>
           <span className="text-[10px] bg-white/20 text-white px-2 py-0.5 rounded-full">HIPAA</span>
@@ -39,7 +39,7 @@ export function HealthcarePreview() {
         <div className="space-y-2">
           {appointments.map((apt, i) => (
             <div key={i} className="bg-secondary/30 rounded-lg p-2 flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center text-white text-[10px] font-bold">
+              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-[10px] font-bold">
                 {apt.patient.charAt(0)}
               </div>
               <div className="flex-1 min-w-0">

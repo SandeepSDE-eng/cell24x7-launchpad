@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
+import { getCachedVisitorGeo } from "@/lib/visitorTracking";
 
 export function ContactForm() {
   const [name, setName] = React.useState("");
@@ -12,7 +13,19 @@ export function ContactForm() {
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const payload = { name, email, message, channels: Object.keys(channels).filter((k) => channels[k]), createdAt: new Date().toISOString() };
+    const geo = getCachedVisitorGeo();
+    const payload = {
+      name,
+      email,
+      message,
+      channels: Object.keys(channels).filter((k) => channels[k]),
+      createdAt: new Date().toISOString(),
+      ip: geo.ip,
+      city: geo.city,
+      region: geo.region,
+      country: geo.country,
+      flag: geo.flagEmoji,
+    };
 
     try {
       const existing = JSON.parse(localStorage.getItem("cell24x7_leads") || "[]");

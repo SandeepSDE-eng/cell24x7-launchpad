@@ -6,88 +6,88 @@
 
 @layer base {
   :root {
-    /* Gupshup-inspired Purple/Magenta + Blue Palette */
+    /* Cell24x7 Royal Indigo & Electric Violet Enterprise Palette */
     --background: 0 0% 100%;
-    --foreground: 240 10% 10%;
+    --foreground: 240 10% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card-foreground: 240 10% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover-foreground: 240 10% 4%;
 
-    /* Primary - Purple/Violet */
-    --primary: 271 81% 56%;
+    /* Primary - Royal Indigo (#4F46E5) */
+    --primary: 243 75% 59%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Soft Gray */
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 10%;
+    /* Secondary - Soft Lavender Tint */
+    --secondary: 243 100% 97%;
+    --secondary-foreground: 243 75% 59%;
 
     --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted-foreground: 240 4% 36%;
 
-    /* Accent - Magenta/Pink */
-    --accent: 330 85% 60%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Lavender Accent */
+    --accent: 243 100% 97%;
+    --accent-foreground: 243 75% 59%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 240 6% 90%;
     --input: 240 6% 90%;
-    --ring: 271 81% 56%;
+    --ring: 243 75% 59%;
 
-    /* For daily theme switching (hex, used by JS) */
-    --color-background: #fff;
-    --color-foreground: #222;
-    --color-primary: #0ea5a4;
-    --color-accent: #06b6d4;
+    /* For theme switching */
+    --color-background: #ffffff;
+    --color-foreground: #09090b;
+    --color-primary: #4f46e5;
+    --color-accent: #eef2ff;
 
     --radius: 1rem;
 
-    /* Custom Brand Colors - Gupshup Inspired */
-    --brand-purple: 271 81% 56%;
-    --brand-magenta: 330 85% 60%;
+    /* Custom Brand Colors - Enterprise Indigo & Violet Palette */
+    --brand-purple: 243 75% 59%;
+    --brand-magenta: 258 90% 66%;
     --brand-blue: 217 91% 60%;
-    --brand-pink: 340 82% 65%;
-    --brand-orange: 25 95% 60%;
-    --brand-gradient-start: 271 81% 56%;
-    --brand-gradient-end: 330 85% 60%;
+    --brand-pink: 270 95% 75%;
+    --brand-orange: 199 89% 48%;
+    --brand-gradient-start: 243 75% 59%;
+    --brand-gradient-end: 258 90% 66%;
     
     /* Surface Colors */
     --surface-elevated: 0 0% 100%;
     --surface-sunken: 240 5% 97%;
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(240 10% 10% / 0.04);
-    --shadow-md: 0 4px 6px -1px hsl(240 10% 10% / 0.08), 0 2px 4px -2px hsl(240 10% 10% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(240 10% 10% / 0.08), 0 4px 6px -4px hsl(240 10% 10% / 0.04);
-    --shadow-xl: 0 20px 25px -5px hsl(240 10% 10% / 0.1), 0 8px 10px -6px hsl(240 10% 10% / 0.08);
-    --shadow-glow: 0 0 60px hsl(271 81% 56% / 0.25);
+    --shadow-sm: 0 1px 2px 0 hsl(243 75% 59% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(243 75% 59% / 0.08), 0 2px 4px -2px hsl(243 75% 59% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(243 75% 59% / 0.08), 0 4px 6px -4px hsl(243 75% 59% / 0.04);
+    --shadow-xl: 0 20px 25px -5px hsl(243 75% 59% / 0.1), 0 8px 10px -6px hsl(243 75% 59% / 0.08);
+    --shadow-glow: 0 0 60px hsl(243 75% 59% / 0.25);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 271 81% 56%;
+    --sidebar-primary: 243 75% 59%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent: 243 100% 97%;
+    --sidebar-accent-foreground: 243 75% 59%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 271 81% 56%;
+    --sidebar-ring: 243 75% 59%;
   }
 
   .dark {
-    --background: 240 10% 6%;
+    --background: 240 10% 4%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 8%;
+    --card: 240 10% 7%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 8%;
+    --popover: 240 10% 7%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 271 81% 65%;
-    --primary-foreground: 240 10% 6%;
+    --primary: 243 85% 68%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 240 6% 15%;
     --secondary-foreground: 0 0% 98%;
@@ -95,15 +95,15 @@
     --muted: 240 6% 15%;
     --muted-foreground: 240 5% 65%;
 
-    --accent: 330 85% 65%;
-    --accent-foreground: 240 10% 6%;
+    --accent: 243 75% 25%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 6% 20%;
-    --input: 240 6% 20%;
-    --ring: 271 81% 65%;
+    --border: 240 6% 18%;
+    --input: 240 6% 18%;
+    --ring: 243 85% 68%;
 
     --surface-elevated: 240 10% 10%;
     --surface-sunken: 240 10% 4%;

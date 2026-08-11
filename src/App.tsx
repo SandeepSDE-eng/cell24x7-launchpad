@@ -14,6 +14,8 @@ import Integrations from "./pages/Integrations";
 import Resources from "./pages/Resources";
 import BookDemo from "./pages/BookDemo";
 import Admin from "./pages/Admin";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -41,25 +43,24 @@ import RealEstate from "./pages/usecases/RealEstate";
 
 // Company pages
 import AboutUs from "./pages/company/AboutUs";
+import CompanyProfile from "./pages/company/CompanyProfile";
 import Careers from "./pages/company/Careers";
 import Blog from "./pages/company/Blog";
 import useAutoTheme from "./hooks/useAutoTheme";
+import useVisitorTracker from "./hooks/useVisitorTracker";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
+function VisitorTrackerRunner() {
+  useVisitorTracker();
+  return null;
+}
+
 function App() {
   useAutoTheme();
   useEffect(() => {
-    // Change background and text color of body for full-site effect
-    const root = document.documentElement;
-    const body = document.body;
-    body.style.backgroundColor = getComputedStyle(root).getPropertyValue('--color-primary');
-    body.style.color = '#fff'; // or choose a contrasting color
-    return () => {
-      body.style.backgroundColor = '';
-      body.style.color = '';
-    };
+    // Note: Global body background override removed to allow proper section-level styling
   }, []);
 
   return (
@@ -68,6 +69,7 @@ function App() {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <VisitorTrackerRunner />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/features" element={<Features />} />
@@ -79,6 +81,8 @@ function App() {
             <Route path="/integrations" element={<Integrations />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/book-demo" element={<BookDemo />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/admin" element={/* Admin dashboard — demo-only */ <Admin />} />
             
             {/* Feature pages */}
@@ -104,6 +108,7 @@ function App() {
             
             {/* Company pages */}
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/company-profile" element={<CompanyProfile />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
             

@@ -14,15 +14,14 @@ if %errorlevel% neq 0 (
 
 :: 2. Upload to server
 echo.
-echo Step 2: Uploading dist files to server...
-echo (It might prompt you for your SSH password)
+echo Step 2: Uploading dist files to server via SFTP...
 echo.
 
-scp -r "C:\SandeepYadav\CMT PROJECT\3rd feb\cell24x7-launchpad-main\dist\*" adm.Cell24X7@154.210.160.223:/home/adm.Cell24X7/cmt-react/cmtmedia/dist/
+node deploy_sftp.js
 
 if %errorlevel% neq 0 (
     echo.
-    echo [ERROR] Upload failed! Please check if your SSH connection details are correct.
+    echo [ERROR] SFTP Upload failed! Please check the logs.
     pause
     exit /b %errorlevel%
 )

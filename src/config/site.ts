@@ -81,14 +81,6 @@ export const channels = [
     features: ["Rich Cards", "Suggested Actions", "Verified Sender"],
   },
   {
-    id: "whatsapp",
-    name: "WhatsApp Business API",
-    icon: "MessageCircle",
-    color: "from-green-400 to-green-600",
-    description: "Official WhatsApp Business API integration for scalable customer communication",
-    features: ["Verified Business Profile", "Broadcast Messages", "Interactive Buttons", "Catalog Integration"],
-  },
-  {
     id: "email",
     name: "Email",
     icon: "Mail",

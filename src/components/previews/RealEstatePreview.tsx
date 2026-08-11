@@ -47,7 +47,7 @@ export function RealEstatePreview() {
               </div>
               <div className="flex flex-col items-end gap-1">
                 <span className={`text-[8px] px-1.5 py-0.5 rounded-full ${
-                  lead.status === 'hot' ? 'bg-red-500 text-white' :
+                  lead.status === 'hot' ? 'bg-indigo-600 text-white' :
                   lead.status === 'warm' ? 'bg-amber-500 text-white' :
                   'bg-blue-500 text-white'
                 }`}>{lead.status.toUpperCase()}</span>

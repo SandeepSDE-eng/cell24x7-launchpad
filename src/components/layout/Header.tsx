@@ -79,8 +79,7 @@ export function Header() {
           <img
             src={logo}
             alt="Cell24x7"
-            className="h-8 md:h-10 lg:h-12 object-contain shadow-sm"
-            style={{ filter: 'brightness(0) saturate(100%) invert(41%) sepia(77%) saturate(749%) hue-rotate(242deg) brightness(97%) contrast(101%)' }}
+            className="h-8 md:h-10 lg:h-12 object-contain [filter:hue-rotate(240deg)]"
           />
           <span className="sr-only">{siteConfig.name}</span>
         </Link>
@@ -139,7 +138,7 @@ export function Header() {
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-3">
           <Button variant="ghost" className="text-foreground hover:text-primary" asChild>
-            <a href="https://project.pingchannel.com/auth" target="_blank" rel="noopener noreferrer">Login</a>
+            <Link to="/login">Login</Link>
           </Button>
           <Button 
             variant="hero" 
@@ -229,7 +228,7 @@ export function Header() {
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
                 <Button variant="ghost" asChild className="w-full justify-start">
-                  <a href="https://project.pingchannel.com/auth" target="_blank" rel="noopener noreferrer">Login</a>
+                  <a href="https://notifynow.in/auth" target="_blank" rel="noopener noreferrer">Login</a>
                 </Button>
                 <Button variant="hero" className="w-full rounded-full" asChild>
                   <Link to={siteConfig.cta.primary.href}>

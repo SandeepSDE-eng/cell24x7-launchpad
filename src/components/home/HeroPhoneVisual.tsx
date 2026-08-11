@@ -1,7 +1,7 @@
 import { MessageCircle, Mail, Phone, Smartphone, MessageSquare, Bot } from "lucide-react";
 
 const channels = [
-  { icon: Mail, color: "from-[#EF4444] to-[#DC2626]", name: "Email", position: -55 },
+  { icon: Mail, color: "from-[#6366F1] to-[#4F46E5]", name: "Email", position: -55 },
   { icon: Phone, color: "from-[#F97316] to-[#EA580C]", name: "Voice", position: 5 },
   { icon: Bot, color: "from-[#06B6D4] to-[#0891B2]", name: "AI Bot", position: 55 },
   { icon: MessageCircle, color: "from-[#25D366] to-[#128C7E]", name: "WhatsApp", position: 125 },
@@ -219,12 +219,12 @@ export function HeroPhoneVisual() {
                 
                 {/* Email notification */}
                 <div className="flex gap-2 items-start">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#EF4444] to-[#DC2626] flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center flex-shrink-0 shadow-md">
                     <Mail className="w-3 h-3 text-white" />
                   </div>
                   <div className="bg-white rounded-2xl rounded-tl-sm px-3 py-2 shadow-md border border-gray-100">
                     <p className="text-[8px] text-gray-700 leading-tight font-medium">Invoice ready 📎</p>
-                    <p className="text-[6px] text-red-500 mt-0.5 font-medium">Email</p>
+                    <p className="text-[6px] text-indigo-600 mt-0.5 font-medium">Email</p>
                   </div>
                 </div>
               </div>

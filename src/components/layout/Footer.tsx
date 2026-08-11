@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { siteConfig } from "@/config/site";
-import { MessageCircle, Mail, Phone, Twitter, Linkedin, Facebook } from "lucide-react";
+import { MessageCircle, Mail, Phone, Twitter, Linkedin, Facebook, FileText, Download } from "lucide-react";
 import logo from "@/assets/main red no pad.png";
 
 const footerLinks = {
@@ -20,6 +20,7 @@ const footerLinks = {
   ],
   company: [
     { name: "About Us", href: "/about" },
+    { name: "Company Profile", href: "/company-profile" },
     { name: "Partners", href: "/partners" },
     { name: "Careers", href: "/careers" },
     { name: "Blog", href: "/resources" },
@@ -42,8 +43,7 @@ export function Footer() {
               <img
                 src={logo}
                 alt="Cell24x7"
-                className="h-10 lg:h-12 object-contain shadow-sm"
-                style={{ filter: 'brightness(0) saturate(100%) invert(41%) sepia(77%) saturate(749%) hue-rotate(242deg) brightness(97%) contrast(101%)' }}
+                className="h-10 lg:h-12 object-contain [filter:hue-rotate(240deg)]"
               />
               <span className="sr-only">{siteConfig.name}</span>
             </Link>
@@ -63,11 +63,11 @@ export function Footer() {
               </a>
             </div>
 
-            <div className="flex gap-3">
-              <Link to="/book-demo" className="inline-flex items-center h-10 px-4 bg-[#5956d6] text-white rounded-md text-sm font-semibold">
+            <div className="flex gap-3 mb-6">
+              <Link to="/book-demo" className="inline-flex items-center h-10 px-4 bg-indigo-600 text-white rounded-md text-sm font-semibold hover:bg-indigo-700 transition-colors shadow-sm">
                 Book a Demo
               </Link>
-              <Link to="/signup" className="inline-flex items-center h-10 px-4 border border-[#5956d6] text-[#5956d6] rounded-md text-sm font-semibold">
+              <Link to="/signup" className="inline-flex items-center h-10 px-4 border border-indigo-600 text-indigo-600 rounded-md text-sm font-semibold hover:bg-indigo-600 hover:text-white transition-colors">
                 Start Free Trial
               </Link>
             </div>

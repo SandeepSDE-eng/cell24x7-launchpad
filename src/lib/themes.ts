@@ -1,51 +1,52 @@
 // src/lib/themes.ts
+// Official Cell24x7 Royal Indigo Brand Palette (#4F46E5)
 export const themes = {
   sunday: {
-    '--color-background': '#fff0f6',
-    '--color-foreground': '#2d0036',
-    '--color-primary': '#ff66b2',
-    '--color-accent': '#ffd6e8',
+    '--color-background': '#ffffff',
+    '--color-foreground': '#09090b',
+    '--color-primary': '#4f46e5',
+    '--color-accent': '#eef2ff',
   },
   monday: {
-    '--color-background': '#e8f5e9',
-    '--color-foreground': '#1b5e20',
-    '--color-primary': '#9be7a8',
-    '--color-accent': '#dff6df',
+    '--color-background': '#ffffff',
+    '--color-foreground': '#09090b',
+    '--color-primary': '#4f46e5',
+    '--color-accent': '#eef2ff',
   },
   tuesday: {
-    '--color-background': '#e3f2fd',
-    '--color-foreground': '#0d47a1',
-    '--color-primary': '#a5d8ff',
-    '--color-accent': '#d0ebff',
+    '--color-background': '#ffffff',
+    '--color-foreground': '#09090b',
+    '--color-primary': '#4f46e5',
+    '--color-accent': '#eef2ff',
   },
   wednesday: {
-    '--color-background': '#fffde7',
-    '--color-foreground': '#7f6000',
-    '--color-primary': '#ffe066',
-    '--color-accent': '#fff3bf',
+    '--color-background': '#ffffff',
+    '--color-foreground': '#09090b',
+    '--color-primary': '#4f46e5',
+    '--color-accent': '#eef2ff',
   },
   thursday: {
-    '--color-background': '#f3f0ff',
-    '--color-foreground': '#3d246c',
-    '--color-primary': '#b197fc',
-    '--color-accent': '#e5dbff',
+    '--color-background': '#ffffff',
+    '--color-foreground': '#09090b',
+    '--color-primary': '#4f46e5',
+    '--color-accent': '#eef2ff',
   },
   friday: {
-    '--color-background': '#e6fcf5',
-    '--color-foreground': '#004d40',
-    '--color-primary': '#63e6be',
-    '--color-accent': '#b2f2bb',
+    '--color-background': '#ffffff',
+    '--color-foreground': '#09090b',
+    '--color-primary': '#4f46e5',
+    '--color-accent': '#eef2ff',
   },
   saturday: {
-    '--color-background': '#fff4e6',
-    '--color-foreground': '#7f3d00',
-    '--color-primary': '#ffa94d',
-    '--color-accent': '#ffe0b2',
+    '--color-background': '#ffffff',
+    '--color-foreground': '#09090b',
+    '--color-primary': '#4f46e5',
+    '--color-accent': '#eef2ff',
   },
 };
 
-export function applyTheme(vars: Record<string,string>) {
-  Object.entries(vars).forEach(([k,v]) =>
-    document.documentElement.style.setProperty(k, v),
+export function applyTheme(vars: Record<string, string>) {
+  Object.entries(vars).forEach(([k, v]) =>
+    document.documentElement.style.setProperty(k, v)
   );
 }
