@@ -21,6 +21,7 @@ const footerLinks = {
   company: [
     { name: "About Us", href: "/about" },
     { name: "Company Profile", href: "/company-profile" },
+    { name: "QR Brochure & Scanner", href: "/qr" },
     { name: "Partners", href: "/partners" },
     { name: "Careers", href: "/careers" },
     { name: "Blog", href: "/resources" },

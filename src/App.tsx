@@ -19,6 +19,8 @@ import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import QRPage from "./pages/QRPage";
+
 
 // Feature pages
 import UnifiedInbox from "./pages/features/UnifiedInbox";
@@ -115,6 +117,10 @@ function App() {
             {/* Legal pages */}
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
+            
+            {/* QR Scanner & Brochure route */}
+            <Route path="/qr" element={<QRPage />} />
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
