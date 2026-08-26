@@ -6,7 +6,7 @@ const config = {
   host: "154.210.160.233",
   port: 2232,
   username: "adm.Cell24X7",
-  password: "SM8En#M9ZXvKhQBk",
+  password: "A9#kLm2!Qx7@Rp",
 };
 
 const cmd = process.argv[2] || "ls -la && pm2 status";
