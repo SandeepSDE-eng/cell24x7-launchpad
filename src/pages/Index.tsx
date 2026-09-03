@@ -5,6 +5,7 @@ import { FeaturesSection } from "@/components/home/FeaturesSection";
 import { UseCasesSection } from "@/components/home/UseCasesSection";
 import { TrustSection } from "@/components/home/TrustSection";
 import { DemoShowcaseSection } from "@/components/home/DemoShowcaseSection";
+import { PricingScaleSection } from "@/components/home/PricingScaleSection";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       </div>
       <DemoShowcaseSection />
       <UseCasesSection />
+      <PricingScaleSection />
       <TrustSection />
     </Layout>
   );

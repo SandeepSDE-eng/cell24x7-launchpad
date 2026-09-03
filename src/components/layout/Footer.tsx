@@ -12,10 +12,10 @@ const footerLinks = {
     { name: "API Docs", href: "/docs" },
   ],
   solutions: [
-    { name: "E-commerce", href: "/use-cases#ecommerce" },
-    { name: "Healthcare", href: "/use-cases#healthcare" },
-    { name: "Education", href: "/use-cases#education" },
-    { name: "Real Estate", href: "/use-cases#realestate" },
+    { name: "E-commerce", href: "/use-cases/ecommerce" },
+    { name: "Healthcare", href: "/use-cases/healthcare" },
+    { name: "Education", href: "/use-cases/education" },
+    { name: "Real Estate", href: "/use-cases/real-estate" },
     { name: "BFSI", href: "/use-cases#bfsi" },
   ],
   company: [
