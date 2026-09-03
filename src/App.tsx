@@ -20,7 +20,7 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import QRPage from "./pages/QRPage";
-
+import ApiDocs from "./pages/ApiDocs";
 
 // Feature pages
 import UnifiedInbox from "./pages/features/UnifiedInbox";
@@ -120,6 +120,10 @@ function App() {
             
             {/* QR Scanner & Brochure route */}
             <Route path="/qr" element={<QRPage />} />
+
+            {/* API Documentation routes */}
+            <Route path="/docs" element={<ApiDocs />} />
+            <Route path="/api-docs" element={<ApiDocs />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

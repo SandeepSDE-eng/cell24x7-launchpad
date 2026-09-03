@@ -40,6 +40,7 @@ const navigationItems = [
     ],
   },
   { name: "Pricing", href: "/pricing" },
+  { name: "API Docs", href: "/docs" },
   {
     name: "Use Cases",
     href: "/use-cases",

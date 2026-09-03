@@ -1,24 +1,22 @@
 import { channels } from "@/config/site";
 import { 
   MessageCircle, 
-  Instagram, 
-  Facebook, 
   Smartphone, 
   Mail, 
   Phone,
   MessageSquare,
+  Code,
   ArrowRight 
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   MessageCircle,
-  Instagram,
-  Facebook,
   Smartphone,
   Mail,
   Phone,
   MessageSquare,
+  Code,
 };
 
 export function ChannelsSection() {

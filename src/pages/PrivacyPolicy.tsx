@@ -317,7 +317,7 @@ export default function PrivacyPolicy() {
                     </div>
                     <div className="sm:col-span-2 flex items-start gap-2 pt-1">
                       <Building className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
-                      <span>Address: Phoenix Marketcity, No.3B-05, Paragon Plaza, Kurla West, Mumbai, Maharashtra 400070</span>
+                      <span>Address: Phoenix Marketcity, No.3B-05, Paragon Plaza, LBS Marg, Mumbai, Maharashtra 400070</span>
                     </div>
                   </div>
                 </div>
